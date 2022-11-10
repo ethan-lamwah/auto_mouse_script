@@ -15,8 +15,7 @@ async def move_mouse(interval):
         # pyautogui.press('shift')
 
         delay_in_sec = interval_minute * 60
-        await asyncio.sleep(delay_in_sec)  
-        break;     
+        await asyncio.sleep(delay_in_sec)   
 
 
 if __name__ == "__main__":
