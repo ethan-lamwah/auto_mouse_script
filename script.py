@@ -20,12 +20,13 @@ async def move_mouse(interval):
 
 if __name__ == "__main__":
     interval_minute = 5 # default interval is 5 Minutes
+    # read Command line arguments using sys module
     if (len(sys.argv) > 1 and sys.argv[1].isnumeric()):
-        interval_minute = int(sys.argv[1])  # set interval if it is provided as sys argument
+        interval_minute = int(sys.argv[1]) # override interval if command line arugument is provided
 
     print(f"Start auto-script to move your mouse at every {interval_minute} minutes.")
     
     try:
         asyncio.run(move_mouse(interval_minute))
     except KeyboardInterrupt:
-        pyautogui.alert('Script Aborted due to KeyboardInterrupt')
+        pyautogui.alert('Script Aborted due to KeyboardInterrupt') # catch ctrl+c then promt an alert box
