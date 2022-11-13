@@ -18,6 +18,24 @@ This is a simple python script to keep your system awake by auto moving mouse ar
 ## Abort the runnning script
 `crtl + c` to abort the program at any time.
 
+## Setup zsh command to run the script in MAC
+1. Create a `.command` file and use below sample command. 
+2. Replace `[project_dir]` to your project directory.
+3. Save and ready to go!
+
+```bash
+#! /bin/zsh
+echo -n "Changing directory..."
+cd '/[project_dir]/' && echo "Done"
+echo -n "Activating venv..."
+source venv/bin/activate && echo "Done"
+echo "Running script...(ctrl+c to terminate)"
+python -m script 3
+echo "Deactivating venv..."
+deactivate
+echo "Ready to exit"
+```
+
 # PyAutoGUI
 > PyAutoGUI is a cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse & keyboard. 
 
