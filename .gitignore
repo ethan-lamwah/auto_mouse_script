@@ -1,4 +1,5 @@
 /.DS_Store
+*.command
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
