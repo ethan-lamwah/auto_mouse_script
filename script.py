@@ -10,7 +10,7 @@ async def move_mouse(interval):
 
     while True:
         pyautogui.moveRel(0, 400, duration=1, tween=pyautogui.easeInOutQuad)    # move mouse relative to its current position with yOffset=400
-        pyautogui.moveRel(0, -400, duration=1, tween=pyautogui.easeInOutQuad)   # move mouse relative to its current position with yOffset=400
+        pyautogui.moveRel(0, -400, duration=1, tween=pyautogui.easeInOutQuad)   # move mouse relative to its current position with yOffset=-400
         print(f"Move at {datetime.now().strftime('%b %d %I:%M %p')}")
         # pyautogui.press('shift')
 
@@ -29,4 +29,6 @@ if __name__ == "__main__":
     try:
         asyncio.run(move_mouse(interval_minute))
     except KeyboardInterrupt:
-        pyautogui.alert('Script Aborted due to KeyboardInterrupt') # catch ctrl+c then promt an alert box
+        # pyautogui.alert('Script Aborted due to KeyboardInterrupt') # catch ctrl+c then promt an alert box
+        print("KeyboardInterrupt: CTRL+C. Exit gracefully.")
+        exit(0)
