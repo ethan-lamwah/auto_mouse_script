@@ -36,6 +36,16 @@ deactivate
 echo "Ready to exit"
 ```
 
+*If you want to **suspend** the running process in Linux, press `CTRL+Z`. To resume it, type `fg` in command line.*
+
+```bash
+# CTRL+Z is pressed
+zsh: suspended  python -m script 1
+# fg is typed
+user-mac auto_mouse_script % fg
+[1]  + continued  python -m script 1
+```
+
 # PyAutoGUI
 > PyAutoGUI is a cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse & keyboard. 
 
